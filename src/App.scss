@@ -1,0 +1,13 @@
+#wrapper{
+    text-align: center;
+    position: relative;
+    margin: auto;
+    #break-wrapper, #session-wrapper{
+        display: flex;
+        justify-content: center;
+        button{
+            align-self: center;
+            flex-grow: 0;
+        }
+    }
+}
