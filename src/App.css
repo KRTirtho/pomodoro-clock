@@ -1,24 +1,102 @@
 #wrapper {
   text-align: center;
-  position: relative;
-  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-#wrapper #break-wrapper, #wrapper #session-wrapper {
+#wrapper .title {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #00aeff;
+}
+
+#wrapper #timer-wrapper {
+  border: 2px solid black;
+  border-radius: 50px;
+  padding-top: 0;
+  padding-bottom: 30px;
+  margin: 50px 0;
+}
+
+#wrapper #timer-wrapper h1 {
+  font-weight: 600;
+  font-size: 35px;
+}
+
+#wrapper #timer-wrapper span {
+  font-size: 30px;
+  text-align: center;
+}
+
+#wrapper .length-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#wrapper .length-wrapper h1 {
+  color: #00a365;
+  font-weight: 500;
+}
+
+#wrapper .length-wrapper h2 {
+  color: #004177;
+}
+
+#wrapper .length-wrapper #break-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-#wrapper #break-wrapper button, #wrapper #session-wrapper button {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
+#wrapper .length-wrapper #session-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#wrapper button {
+  height: 30px;
+  width: 60px;
+  border: none;
+  background: #004177;
+  color: white;
+  border-radius: 5px;
+  margin: 10px;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+#wrapper button:disabled {
+  cursor: not-allowed;
+  background: #437bb9;
+}
+
+#wrapper button:hover {
+  background: #0072cf;
+}
+
+#wrapper button:active {
+  background: #00223d;
 }
 /*# sourceMappingURL=App.css.map */
