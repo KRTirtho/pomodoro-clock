@@ -1,78 +1,127 @@
-#wrapper{
-    text-align: center;
-    position: absolute;
+#wrapper {
+  text-align: center;
+  position: relative;
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  #description {
+    text-align: justify;
+    h2 {
+      text-align: center;
+      color: rgb(255, 166, 0);
+    }
+  }
+  .title {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: rgb(0, 174, 255);
+  }
+  #timer-wrapper {
+    p {
+      color: #fcfcfc;
+      text-shadow: inset 0 0 10px rgb(34, 34, 34);
+      text-shadow: 0 0 10px rgb(32, 32, 32);
+    }
+    background-image: linear-gradient(
+      120deg,
+      rgb(0, 140, 255),
+      rgb(179, 103, 250),
+      rgb(71, 255, 163),
+      yellow
+    );
+    background-size: 400% 400%;
+    border-radius: 50px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    margin: 50px 0;
+    transition: 0.5s all ease;
+    animation: animate 5s linear infinite;
+    width: 50%;
+    position: relative;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    .title{
-      font-size: 50px;
-      font-family: Arial, Helvetica, sans-serif;
+    transform: translateX(-50%);
+    h1 {
+      font-weight: 600;
+      font-size: 35px;
+    }
+    span {
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+  .length-wrapper {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      color: rgb(225, 104, 255);
+      font-weight: 450;
+    }
+    h2 {
+      color: #004177;
       font-weight: 400;
-      color: rgb(0, 174, 255);
     }
-    #timer-wrapper{
-      border: 2px solid black;
-      border-radius: 50px;
-      padding-top: 0;
-      padding-bottom: 30px;
-      margin: 50px 0;
-      animation: animate 5s linear infinite;
-      h1{
-        font-weight: 600;
-        font-size: 35px;
-      }
-      span{
-        font-size: 30px;
-        text-align: center;
-      }
-    }
-    .length-wrapper{
+    #break-wrapper {
       display: flex;
-      flex-direction: column;
-      h1{
-        color: rgb(225, 104, 255);
-        font-weight: 450;
-      }
-      h2{
-        color: #004177;
-        font-weight: 400;
-      }
-      #break-wrapper{
-        display: flex;
-        align-items: center;
-        justify-content: center ;
-      }
-      #session-wrapper{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+      align-items: center;
+      justify-content: center;
     }
-        button{
-            height: 30px;
-            width: 60px;
-            border: none;
-            background: #004177;
-            color: white;
-            border-radius:  5px;
-            margin: 10px;
-            transition: 0.1s ease;
-            &:disabled{
-              cursor: not-allowed;
-              background: rgb(67, 123, 185);
-            }
-            &:hover{
-              background: #0072cf;
-            }
-            &:active{
-              background: #00223d;
-            }
-        }
-      }      
+    #session-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  button {
+    height: 30px;
+    width: 60px;
+    border: none;
+    background: #004177;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+    transition: 0.1s ease;
+    &:disabled {
+      cursor: not-allowed;
+      background: rgb(67, 123, 185);
+    }
+    &:hover {
+      background: #0072cf;
+    }
+    &:active {
+      background: #00223d;
+    }
+  }
+}
 
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(15, 124, 175);
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 236, 185);
+}
 
-      @keyframes animate{
-        0%{
-          border: 2px solid black;
-        }
-      }
+@keyframes animate {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  #wrapper {
+    width: 90%;
+    #timer-wrapper {
+      width: 90%;
+    }
+  }
+}

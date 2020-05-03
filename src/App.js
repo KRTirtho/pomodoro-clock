@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { Fragment } from "react/cjs/react.production.min";
 
 let sessionLength = 25; //For Session Length
 
@@ -164,6 +165,7 @@ class App extends React.Component {
       play,
     } = this.state;
     return (
+      <div id="container">
       <div id="wrapper">
         {/*For All Text & Extra Design*/}
         <section id="ui-wrapper">
@@ -220,8 +222,16 @@ class App extends React.Component {
 
         {/* For All Timmer Wrapper */}
         <section id="timer-wrapper">
-          <h1 style={isSession? {color: "#ff7360"}:{color: "#55ff71"}} id="timer-label">{isSession ? "Session" : "Break"}</h1>
-          <span style={isSession? {color: "#ff7360"}:{color: "#55ff71"}}  id="time-left">
+          <h1
+            style={isSession ? { color: "#ff7360" } : { color: "#55ff71" }}
+            id="timer-label"
+          >
+            {isSession ? "Session" : "Break"}
+          </h1>
+          <span
+            style={isSession ? { color: "#ff7360" } : { color: "#55ff71" }}
+            id="time-left"
+          >
             {sessionNum >= 0 && sessionNum <= 9 ? secondZero : ""}
             {sessionNum}:{secondNum >= 0 && secondNum <= 9 ? secondZero : ""}
             {secondNum}
@@ -263,6 +273,26 @@ class App extends React.Component {
             Reset
           </button>
         </section>
+        <section id="description">
+          <p>
+            <h2>Pomodoro Technique<h6 style={{color: "#333"}}>From Wikipedia, the free encyclopedia Jump to navigationJump to
+            search</h6></h2> <br />
+            A Pomodoro kitchen timer, after which the method is named The
+            Pomodoro Technique is a time management method developed by
+            Francesco Cirillo[1] in the late 1980s.[2] The technique uses a
+            timer to break down work into intervals, traditionally 25 minutes in
+            length, separated by short breaks. Each interval is known as a
+            pomodoro, from the Italian word for 'tomato', after the
+            tomato-shaped kitchen timer that Cirillo used as a university
+            student.
+            <br /> <br /> For further information read the full article about it in{" "}
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Wikipedia/Pomodoro_Tecthnic</a>
+          </p>
+        </section>
+      </div>
+      <footer>
+          <p>Made By KR.Tirtho | Copyright&copy; 2019-2020</p>
+        </footer>
       </div>
     );
   }
