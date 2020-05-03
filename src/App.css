@@ -20,6 +20,8 @@
   padding-top: 0;
   padding-bottom: 30px;
   margin: 50px 0;
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
 }
 
 #wrapper #timer-wrapper h1 {
@@ -43,12 +45,13 @@
 }
 
 #wrapper .length-wrapper h1 {
-  color: #00a365;
-  font-weight: 500;
+  color: #e168ff;
+  font-weight: 450;
 }
 
 #wrapper .length-wrapper h2 {
   color: #004177;
+  font-weight: 400;
 }
 
 #wrapper .length-wrapper #break-wrapper {
@@ -98,5 +101,17 @@
 
 #wrapper button:active {
   background: #00223d;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    border: 2px solid black;
+  }
+}
+
+@keyframes animate {
+  0% {
+    border: 2px solid black;
+  }
 }
 /*# sourceMappingURL=App.css.map */

@@ -16,6 +16,7 @@
       padding-top: 0;
       padding-bottom: 30px;
       margin: 50px 0;
+      animation: animate 5s linear infinite;
       h1{
         font-weight: 600;
         font-size: 35px;
@@ -29,11 +30,12 @@
       display: flex;
       flex-direction: column;
       h1{
-        color: rgb(0, 163, 101);
-        font-weight: 500;
+        color: rgb(225, 104, 255);
+        font-weight: 450;
       }
       h2{
         color: #004177;
+        font-weight: 400;
       }
       #break-wrapper{
         display: flex;
@@ -67,3 +69,10 @@
             }
         }
       }      
+
+
+      @keyframes animate{
+        0%{
+          border: 2px solid black;
+        }
+      }

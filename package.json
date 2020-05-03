@@ -9,7 +9,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
-  "homepage":"https://krtirtho.github.io/project_ponodoro_clock/fcc/",
+  "homepage":"https://krtirtho.github.io/project_pomodoro_clock_fcc/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
